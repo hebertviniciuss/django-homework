@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block title %}Página Inicial{% endblock title %}
+
+{% block content %}
+<main>
+ <section>
+  <ul>
+    {% for curso in cursos %}
+    <li>
+      <a href="{% url 'postagens' curso.id %}"> {{curso.nome}} </a>
+    </li>
+    {% endfor %}
+  </ul>
+ <section>
+</main>
+{% endblock content %}

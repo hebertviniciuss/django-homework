@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Postagens{% endblock title %}
+
+{% block content %}
+<main>
+ <section>
+    <ul>
+        {% for postagem in postagens %}
+        <li>
+          <a href="{% url 'postagem' postagem.id %}"> {{ postagem.titulo }} </a>
+        </li>
+      {% endfor %}
+    </ul>
+ </section>
+</main>
+{% endblock content %}

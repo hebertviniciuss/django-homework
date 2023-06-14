@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ postagem.titulo }}{% endblock title %}
+
+{% block content %}
+<main>
+ <section>
+    <div class="publi">
+        <h1>{{ postagem.titulo }}</h1>
+        {% if postagem.imagem %}
+        <img src="{{ postagem.imagem.url }}">
+      {% endif %}
+    </div>
+    <div class="coment">
+        {{ postagem.descricao }}
+    </div>
+ <section>
+</main>
+{% endblock content %}
